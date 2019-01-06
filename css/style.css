@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #282828;
+  text-align: center;
+  padding-top: 1rem;
+  height: 6rem;
+}
+
+header h1 {
+  color: white;
+  padding: 2rem;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 2rem;
+}
+
+
+/* =============== NAV ============== */
+nav {
+  height: 3rem;
+}
+
+
+/* =========== LOGIN ================ */
+#user-login, #user-reg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  height: calc(100vh - 6rem);
+  background-image: url('../img/mountains.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+  #user-reg {
+    height: calc(185vh - 6rem);
+  }
+
+  #user-login {
+    height: calc(140vh - 6rem);
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  #user-login {
+    height: calc(100vh - 6rem);
+  }
+
+  #user-reg {
+    height: calc(100vh - 6rem);
+  }
+}
+
+#user-login a, #user-reg a {
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#reg-link {
+  color: white;
+  float: right;
+}
+
+#forgot-pass:hover, #reg-link:hover {
+  color: orange;
+  transition: 200ms;
+}
+
+#login-form input, #reg-form input {
+  display: block;
+  width: 90vw;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #282828;
+  border-radius: 3px;
+}
+
+#login-form input[type=email], input[type=password] {
+  padding-left: 1rem;
+}
+
+#login-form input[type=submit], #reg-form input[type=submit] {
+  border: none;
+  background-color: orange;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  #login-form input[type=email], #login-form input[type=password] {
+    width: 30vw;
+    display: inline-block;
+  }
+
+  #login-form input[type=submit] {
+    width: 60vw;
+  }
+}
+
+#login-message {
+  font-size: 1.3rem;
+  font-family: 'Quicksand', sans-serif;
+  padding: 1rem 0;
+}
+
+
+
+/* ================= REGISTER ================== */
+#user-reg a {
+  color: white;
+}
+
+#reg-form input {
+  padding-left: 1rem;
+}
+
+#reg-form input[type=submit] {
+  padding-left: 0;
+}
+
+#user-reg i, #reg-back i {
+  margin-right: 0.5rem;
+}
+
+#reg-back {
+  text-align: center;
+  padding-top: 1rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#reg-back a {
+  text-decoration: none;
+  color: white;
+}
+
+
+#reg-back a:hover {
+  color: orange;
+  transition: 300ms;
+}
+
+#reg-error {
+  background-color: #ff4c4c;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#reg-success {
+  background-color: #32CD32;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  #reg-form {
+    width: 70vw;
+  }
+
+  #reg-form input[type=text], #reg-form input[type=email], #reg-form input[type=password] {
+    width: 49.5%;
+    display: inline-block;
+  }
+
+  #reg-form input[type=submit] {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+/* ================ CHAT FORM ================== */
+#chat-form {
+  position: fixed;
+  bottom: 10px;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chat-form input {
+  display: block;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chat-form input[type=submit] {
+  border: none;
+  background-color: orange;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 0;
+  margin-top: 0.2rem;
+}
+
+#chat-form input[type=text] {
+  height: 2rem;
+}
+
+#chat-back {
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#chat-back a {
+  color: #282828;
+  text-decoration: none;
+}
+
+#chat-back i {
+  margin-right: 0.5rem;
+}
+
+
+
+/* ========================== CHAT STYLE ==================== */
+#chat-messages {
+  padding: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: #A0A0A0;
+}
+
+@media (min-width: 667px) and (orientation: landscape) {
+  #chat-messages {
+    padding: 2rem;
+  }
+}
+
+.mess-div {
+  background-color: #282828;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.mess-div p {
+  margin: 1rem 0.5rem 0 1rem;
+}
+
+.mess-div span {
+  font-weight: bold;
+}
+
+
+
+/* ==================== USER LIST =============== */
+#user-list {
+  padding: 1rem;
+}
+
+#user-list li {
+  margin: 1rem 0;
+}
+
+#user-list i {
+  margin-right: 1rem;
+}
+
+#user-list a {
+  text-decoration: none;
+  font-size: 1.75rem;
+  color: orange;
+  text-shadow: 1px 1px black;
+}
+
+#users {
+  background-image: url('../img/mountains.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
+  background-attachment: fixed;
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+  #users {
+    height: 150vh;
+  }
+}
+
+@media (min-width: 768px) {
+  #users {
+    height: 90vh;
+  }
+}
+
+
+/* =============== LOG OUT ================== */
+#log-out {
+  background-color: #282828;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+#log-out a {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+}
+
+#log-out i {
+  margin-right: 1rem;
+}
+
+
+/* ================= FOOTER =============== */
+footer {
+  height: 3rem;
+}
